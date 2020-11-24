@@ -1,0 +1,29 @@
+<extends src="src/layouts/master.html">
+  <block name="template">
+    
+    <table class="max-w-600">
+      <each loop="component, index in components">
+
+        <if condition="component.template === 'test_component_first'">
+          <each loop="item, index in component.props.items">
+            
+          </each>
+        </if>
+      
+        <if condition="component.template === 'test_component_second'">
+          <each loop="item, index in component.props.items">
+      
+          </each>
+        </if>
+
+        <if condition="component.template === 'test_component_third'">
+          
+          {{ component.props.title }}
+
+        </if>
+      
+      </each>
+    </table>
+
+  </block>
+</extends>
